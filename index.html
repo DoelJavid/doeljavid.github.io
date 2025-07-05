@@ -5,10 +5,92 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Doel Javid</title>
     <link rel="icon" type="image/svg" href="./static/favicon.svg" />
-    <link rel="stylesheet" type="text/css" href="./static/styles/shared.css" />
+    <link rel="stylesheet" type="text/css" href="./static/styles/index.css" />
+    <script type="module" src="./static/scripts/index.mjs" defer></script>
   </head>
 
   <body>
-    <h1>Hello world!</h1>
+    <!-- Header Section: Contains logo and navbar. -->
+    <header>
+      <a href="./index.html">
+        <img class="logo" src="./static/images/logo.svg" alt="Doel Javid" />
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">The Gallery</a></li>
+          <li><a href="./index.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section: The first thing you see when you enter this website. -->
+      <section id="hero">
+        <img class="hero-img" src="./static/images/doel-intro.svg" alt="Here comes Doel Javid!" />
+        <!-- Cool Scrolling Header: -->
+        <h1>
+          Doel Javid is:
+          <div class="scroll-text">
+            <div class="scroll-text-element">
+              A Programmer
+            </div>
+            <div class="scroll-text-element">
+              A Designer
+            </div>
+            <div class="scroll-text-element">
+              An Artist
+            </div>
+            <div class="scroll-text-element" aria-hidden="true">
+              A Programmer
+            </div>
+          </div>
+        </h1>
+      </section>
+
+      <!-- Project Section: Contains a list of my current projects. -->
+      <section id="projects">
+        <h2 class="stickynote">Doel's Projects</h2>
+        <div class="icon-list">
+          <a class="project-icon" href="">
+            <img class="project-thumbnail" src="https://tr.rbxcdn.com/180DAY-026703a663a2ba9689bb9a29367e2c58/352/352/Image/Png/noFilter" alt="" />
+            <h3 class="project-title">Linked Buildings</h3>
+            <p class="project-description">My first Roblox game!</p>
+          </a>
+          <a class="project-icon" href="">
+            <img class="project-thumbnail" src="./static/images/project-images/blastout-icon.svg" alt="" />
+            <h3 class="project-title">Blast Out</h3>
+            <p class="project-description">Blast your friends!</p>
+          </a>
+          <a class="project-icon" href="">
+            <img class="project-thumbnail" src="./static/images/project-images/this-website-icon.svg" alt="" />
+            <h3 class="project-title">This Website</h3>
+            <p class="project-description">You are here!</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section: Contains copyright information and socials. -->
+    <footer>
+      <div id="copyright-info">
+        <p>Copyright &copy; by DoelJavid.</p>
+        <p>This project is under the <a href="#">MIT license.</a></p>
+      </div>
+      <div id="socials">
+        <h2 class="stickynote">Where to find DoelJavid</h2>
+        <div class="icon-list">
+          <a class="social-icon" href="https://codepen.io/doel_javid" title="CodePen">
+            <img src="./static/images/social-icons/codepen.svg" alt="CodePen" />
+          </a>
+          <a class="social-icon" href="https://github.com/DoelJavid" title="Github">
+            <img src="./static/images/social-icons/github.svg" alt="Github" />
+          </a>
+          <a class="social-icon" href="https://www.roblox.com/users/44434537/profile" title="Roblox">
+            <img src="./static/images/social-icons/roblox.svg" alt="Roblox" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
