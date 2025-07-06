@@ -1,13 +1,33 @@
 
 /* Google Fonts: */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@300..700&display=swap");
 
 /* CSS Variables */
 :root {
-  /* Base Colors */
+  /* Base Color Variables */
   --background-color: #222;
   --text-color: #fff;
   --accent-color: #f91;
+
+  /* Link Color Variables */
+  --link-color: #d44;
+  --link-focus-underline-color: #fff;
+  --link-hover-color: #fff;
+  --link-active-color: #a24;
+
+  /* Shadow Variables */
+  --shadow-color: #0007;
+  --default-shadow: 3px 5px var(--shadow-color);
+
+  /* Sticky Note Decoration Variables */
+  --stickynote-background: #fff;
+  --stickynote-pencil: #222;
+  --stickynote-border: 3px solid #aaa;
+}
+
+/* Root Styling: Includes default text styles and element colors. */
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -16,7 +36,143 @@ html {
 }
 
 body {
+  margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Link Styles */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+a:focus {
+  outline: none;
+  text-decoration: underline var(--link-focus-underline-color) 2px;
+}
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline var(--link-hover-color) 2px;
+}
+a:active {
+  color: var(--link-active-color);
+  text-decoration: underline var(--link-active-color);
+}
+
+/* Header Content Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 3.5rem;
+  padding: 1rem;
+  background-color: var(--background-color);
+  box-shadow: 0 5px var(--shadow-color);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Logo Styles */
+.logo {
+  display: inline-block;
+  height: 100%;
+  transition: transform 0.2s;
+}
+.logo:focus {
+  transform: scale(1.1);
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+.logo:active {
+  transform: scale(0.9);
+}
+
+/* Footer Content Styles */
+footer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 240px;
+}
+
+/* Icon List: A general purpose list for icons. */
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Sticky Note Styles: Used for decoration. */
+@keyframes stickynote-shake {
+  33% {
+    transform: rotate(-6deg);
+  }
+  66% {
+    transform: rotate(8deg);
+  }
+}
+
+.stickynote {
+  display: block;
+  transform: rotate(4deg);
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 8px;
+  background-color: var(--stickynote-background);
+  color: var(--stickynote-pencil);
+  border: var(--stickynote-border);
+  box-shadow: var(--default-shadow);
+  font-family: "Patrick Hand", cursive;
+  cursor: default;
+}
+.stickynote:nth-of-type(2n) {
+  transform: rotate(-4deg);
+}
+.stickynote:hover {
+  animation: 0.5s ease-in-out stickynote-shake;
+}
+
+/* Social Icons */
+
+.social-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  transition: transform 0.2s;
+}
+.social-icon:focus {
+  transform: scale(1.2);
+  outline: none;
+}
+.social-icon:hover {
+  transform: scale(1.2) rotate(4deg);
+}
+.social-icon:active {
+  transform: scale(0.9) rotate(-4deg);
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
 }
 
