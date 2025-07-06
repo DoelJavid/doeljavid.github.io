@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="800"
+   viewBox="0 0 500 800"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="intro-door.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1"
+     inkscape:cx="175"
+     inkscape:cy="457"
+     inkscape:window-width="1920"
+     inkscape:window-height="1108"
+     inkscape:window-x="-9"
+     inkscape:window-y="54"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="10"
+       spacingy="10"
+       empcolor="#ffffff"
+       empopacity="0.23921569"
+       color="#ffffff"
+       opacity="0.078431373"
+       empspacing="8"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       height="1.1367035"
+       width="1.2815435"
+       y="-0.070235789"
+       x="-0.14199527"
+       inkscape:label="Outline"
+       id="filter152">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="8"
+         result="blur1"
+         id="feGaussianBlur148" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur1"
+         operator="out"
+         result="composite1"
+         id="feComposite148" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 -0 "
+         result="colormatrix1"
+         id="feColorMatrix148" />
+      <feGaussianBlur
+         stdDeviation="2.42"
+         result="blur2"
+         id="feGaussianBlur149" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur2"
+         operator="over"
+         result="composite2"
+         id="feComposite149" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -0 "
+         result="colormatrix2"
+         id="feColorMatrix149" />
+      <feGaussianBlur
+         stdDeviation="1"
+         result="blur3"
+         id="feGaussianBlur150" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix3"
+         id="feColorMatrix150" />
+      <feFlood
+         flood-opacity="0.25"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood150" />
+      <feComposite
+         in="flood"
+         in2="colormatrix3"
+         operator="in"
+         result="composite3"
+         id="feComposite150" />
+      <feComposite
+         in="composite3"
+         in2="colormatrix3"
+         operator="out"
+         result="composite4"
+         id="feComposite151" />
+      <feComposite
+         in="composite4"
+         in2="composite3"
+         k2="1"
+         k3="1"
+         operator="arithmetic"
+         result="composite5"
+         id="feComposite152"
+         k1="0"
+         k4="0" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g8"
+       inkscape:label="door"
+       transform="matrix(1.1006434,0,0,1.1006434,-192.69044,-40.21802)">
+      <rect
+         style="fill:#7b4f2b;fill-opacity:1;stroke:#583117;stroke-width:8.50100004;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         id="rect48"
+         width="230.77203"
+         height="572.77283"
+         x="128.38327"
+         y="134.0444"
+         inkscape:label="door-base"
+         transform="matrix(0.90855948,0,0,0.90855948,175.07073,36.540464)" />
+      <circle
+         style="fill:#ffdf3d;fill-opacity:1;stroke:#b58900;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="path29"
+         cx="468.93436"
+         cy="416.06616"
+         inkscape:label="door-knob"
+         r="18.17119" />
+    </g>
+    <path
+       id="rect1"
+       style="fill:#d9d9d9;fill-opacity:1;stroke:#8d8d8d;stroke-width:7.70451;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 89.719163,93.677826 88.016693,710.03811 H 121.03599 V 126.69713 H 366.43655 V 710.03811 H 397.8993 V 93.677826 H 364.88 122.73846 Z"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:label="door-frame" />
+  </g>
+</svg>
