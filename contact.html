@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Doel Javid - Contact</title>
+    <link rel="stylesheet" type="text/css" href="./static/styles/contact.css" />
+    <link rel="icon" type="image/svg" href="./static/favicon.svg" />
+  </head>
+
+  <body>
+    <!-- Header Section: Contains logo and navbar. -->
+    <header>
+      <a href="./index.html">
+        <img class="logo" src="./static/images/logo.svg" alt="Doel Javid" />
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">The Gallery</a></li>
+          <li><a href="./contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section: Contains the contact form. -->
+    <!-- As you can see, this contact form does nothing. -->
+    <main>
+      <form id="contact-form" action="./contact.html" method="POST">
+        <div class="contact-header stickynote">
+          <p>Have an interesting task?</p>
+          <h1>Contact me today!<h1>
+        </div>
+
+        <label for="name">Your First and Last Name:</label>
+        <input id="name" name="name" type="text"
+          pattern="[A-Za-z]+ ?[A-Za-z]*" placeholder="John Doe" />
+
+        <label for="email">Your E-mail Address <em>(Required)</em>:</label>
+        <input id="email" name="email" type="email" placeholder="example@domain.com" required />
+
+        <label for="phone">Your Phone Number <em>(Required)</em>:</label>
+        <input id="phone" name="phone" type="tel" placeholder="XXX-XXX-XXXX" required />
+
+        <label for="info">Your Message <em>(Required)</em>:</label>
+        <textarea id="info" name="info" rows="6" placeholder="Enter your message here!" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <!-- Footer Section: Contains copyright information and socials. -->
+    <footer>
+      <div id="copyright-info">
+        <p>Copyright &copy; by DoelJavid.</p>
+        <p>This project is under the <a href="#">MIT license.</a></p>
+      </div>
+      <div id="socials">
+        <h2 class="stickynote">Where to find DoelJavid</h2>
+        <div class="icon-list">
+          <a class="social-icon" href="https://codepen.io/doel_javid"
+            title="CodePen">
+            <img src="./static/images/social-icons/codepen.svg" alt="CodePen" />
+          </a>
+          <a class="social-icon" href="https://github.com/DoelJavid"
+            title="Github">
+            <img src="./static/images/social-icons/github.svg" alt="Github" />
+          </a>
+          <a class="social-icon"
+            href="https://www.roblox.com/users/44434537/profile" title="Roblox">
+            <img src="./static/images/social-icons/roblox.svg" alt="Roblox" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+
+@import url("./shared.css");
+
+.contact-header * {
+  margin: 2px 0;
+  text-align: center;
+}
+
+#contact-form {
+  margin-top: 3rem;
+}
+
