@@ -1,7 +1,14 @@
 
-import { animate, createAnimatable, createTimeline } from 'https://cdn.jsdelivr.net/npm/animejs/+esm';
+import {
+  animate,
+  createAnimatable,
+  createTimeline
+} from 'https://cdn.jsdelivr.net/npm/animejs/+esm';
 
 const screenShakeIntensity = 50;
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
 let referrerUrl = null;
 let shouldPlayIntro = true;
 
@@ -66,9 +73,12 @@ function playIntro() {
     introDoorSlam.style.display = "";
     setTimeout(() => {
       introDoor.style.display = "";
-    introDoorSlam.style.display = "none";
+      introDoorSlam.style.display = "none";
     }, 50);
   };
+
+  // For accessibility's sake...
+  document.body.ariaHidden = true;
 
   introOverlay.appendChild(introDoor);
   introOverlay.appendChild(introDoorSlam);
@@ -81,6 +91,7 @@ function playIntro() {
   .call(() => {
     shakeElement(document.body, 500, 25, screenShakeIntensity);
     introOverlay.remove();
+    document.body.ariaHidden = false;
   }, 1000);
 
   console.log("Started intro.");
@@ -98,6 +109,8 @@ if (referrerUrl) {
     shouldPlayIntro = false;
   }
 }
+
+shouldPlayIntro = shouldPlayIntro && !prefersReducedMotion.matches;
 
 if (shouldPlayIntro) {
   playIntro();

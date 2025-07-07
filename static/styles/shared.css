@@ -10,7 +10,7 @@
   --accent-color: #f91;
 
   /* Link Color Variables */
-  --link-color: #d44;
+  --link-color: #f56;
   --link-focus-underline-color: #fff;
   --link-hover-color: #fff;
   --link-active-color: #a24;
@@ -206,4 +206,42 @@ footer {
   width: 100%;
   height: 100%;
 }
+
+/* Utility class for those who prefer reduced motion. */
+.show-when-reduced {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/*
+  Remove all animations and transitions for those who prefer reduced motion and
+  display reduced motion replacements instead of reduced motion elements.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .hide-when-reduced {
+    display: none !important;
+  }
+
+  .show-when-reduced {
+    display: unset;
+    position: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    overflow: unset;
+  }
+}
+
+
 

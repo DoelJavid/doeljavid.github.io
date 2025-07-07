@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -33,7 +33,7 @@
         <!-- Cool Scrolling Header: -->
         <h1>
           Doel Javid is:
-          <div class="scroll-text">
+          <div class="scroll-text hide-when-reduced" aria-hidden="true">
             <div class="scroll-text-element">
               A Programmer
             </div>
@@ -43,9 +43,13 @@
             <div class="scroll-text-element">
               An Artist
             </div>
-            <div class="scroll-text-element" aria-hidden="true">
+            <div class="scroll-text-element">
               A Programmer
             </div>
+          </div>
+          <!-- Alternative text for those who prefer reduced motion. -->
+          <div class="show-when-reduced scroll-text">
+            A Programmer, a Designer, and more!
           </div>
         </h1>
       </section>

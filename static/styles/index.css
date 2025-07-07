@@ -26,7 +26,7 @@
 
 #hero {
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -44,9 +44,8 @@
 
 .hero-img {
   display: block;
-  width: 35%;
-  min-width: 200px;
-  max-width: 500px;
+  height: calc(40lvh + 5rem);
+  min-height: 200px;
   object-fit: contain;
 }
 
@@ -69,9 +68,9 @@
 }
 
 /* Adjust hero image for larger screens: */
-@media (min-width: 668px) {
+@media (min-width: 900px) {
   #hero {
-    justify-content: space-evenly;
+    flex-flow: row-reverse wrap;
     padding: 3.5rem 2rem 0;
   }
 
@@ -84,8 +83,7 @@
   }
 
   .hero-img {
-    width: 50%;
-    min-width: 240px;
+    height: 100lvh;
     max-height: calc(100lvh - 3.5rem);
   }
 }
@@ -171,5 +169,26 @@
 .project-icon:hover .project-description {
   right: 8px;
   opacity: 100%;
+}
+
+/*
+  Adjust everything for those who prefer reduced motion.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  /* Change the size of the hero: */
+  .scroll-text {
+    --scroll-text-width: 400px;
+  }
+
+  /* Make project descriptions display no matter what: */
+  .project-icon .project-title {
+    bottom: calc(8px + 2rem);
+  }
+
+  .project-icon .project-description {
+    right: 8px;
+    opacity: 100%;
+  }
 }
 
