@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Doel Javid - Gallery</title>
+    <link rel="stylesheet" type="text/css" href="./static/styles/gallery.css" />
+    <link rel="icon" type="image/svg" href="./static/favicon.svg" />
+    <script type="module" src="./static/scripts/gallery.mjs"></script>
+  </head>
+
+  <body>
+    <!-- Header Section: Contains logo and navbar. -->
+    <header>
+      <a href="./index.html">
+        <img class="logo" src="./static/images/logo.svg" alt="Doel Javid" />
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="./gallery.html">The Gallery</a></li>
+          <li><a href="./contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section. -->
+    <main>
+      <!-- The Gallery -->
+      <div id="gallery">
+        <div class="stickynote">
+          <h1>The Gallery</h1>
+        </div>
+
+        <!-- Get ready for all the massive image elements! -->
+        <div class="icon-list">
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/grimace.svg"
+              alt="An outstretched face."
+              data-caption="I do lots of vector graphics. This is one is just a simple, wierd example."
+            />
+          </button>
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/cheezeburger.svg"
+              alt="A succulent cheeseburger."
+              data-caption="This is another example of my capabilities in vector graphics: A delicious cheezeburger. (I misspelled that on purpose.)"
+            />
+          </button>
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/chocolate.webp"
+              alt="A pixelated chocolate bar."
+              data-caption="I also do pixel art, too. This is a simple chocolate bar sprite."
+            />
+          </button>
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/profile-pic.webp"
+              alt="A close up photo of Doel Javid's face."
+              data-caption="This is my profile picture."
+            />
+          </button>
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/linked-buildings.webp"
+              alt="A screenshot of toy building debris."
+              data-caption="A screenshot taken from my game, Linked Buildings."
+            />
+          </button>
+          <button class="gallery-img">
+            <img
+              src="./static/images/gallery/brick-breaker-studios-logo.webp"
+              alt="A glowing yellow ball smashing into a grey brick."
+              data-caption="This is the logo for me an my brother's personal game studio, Brick Breaker Studios."
+            />
+          </button>
+        </div>
+        <!-- This is the end of the image gallery. -->
+      </div>
+
+      <!-- The Image Preview -->
+      <dialog id="preview" closedby="any">
+        <figure>
+          <img id="preview-img" />
+          <figcaption id="preview-caption"></figcaption>
+        </figure>
+        <button id="preview-exit">
+          <img src="" alt="Exit" />
+        </button>
+      </dialog>
+    </main>
+
+    <!-- Footer Section: Contains copyright information and socials. -->
+    <footer>
+      <div id="copyright-info">
+        <p>Copyright &copy; by DoelJavid.</p>
+        <p>This project is under the <a href="#">MIT license.</a></p>
+      </div>
+      <div id="socials">
+        <h2 class="stickynote">Where to find DoelJavid</h2>
+        <div class="icon-list">
+          <a class="social-icon" href="https://codepen.io/doel_javid"
+            title="CodePen">
+            <img src="./static/images/social-icons/codepen.svg" alt="CodePen" />
+          </a>
+          <a class="social-icon" href="https://github.com/DoelJavid"
+            title="Github">
+            <img src="./static/images/social-icons/github.svg" alt="Github" />
+          </a>
+          <a class="social-icon"
+            href="https://www.roblox.com/users/44434537/profile" title="Roblox">
+            <img src="./static/images/social-icons/roblox.svg" alt="Roblox" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

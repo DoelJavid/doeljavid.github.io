@@ -1,0 +1,97 @@
+@import url("./shared.css");
+
+/* Gallery Variables */
+:root {
+  --picture-color: #fff;
+  --picture-border: 3px solid #aaa;
+  --picture-padding: 1.5rem;
+}
+
+/* Gallery Styles */
+
+#gallery {
+  width: calc(100% - 20px);
+  max-width: 980px;
+  margin: 8rem auto 2rem;
+  padding: 2rem;
+  background-color: #852;
+  border-image: url("../images/bulletin-board.svg") 34 / auto / 34px repeat;
+}
+
+#gallery .stickynote {
+  margin: 0 auto 2rem;
+}
+
+/*
+  Reused the icon list to reuse code. We need to change align-items to prevent
+  images from stretching out.
+*/
+#gallery .icon-list {
+  align-items: flex-start;
+}
+
+/* This should stay the same no matter what... */
+.gallery-img {
+  transform: rotate(4deg);
+  margin: 1rem;
+  padding: var(--picture-padding);
+  background-color: var(--picture-color);
+  border: var(--picture-border);
+  box-shadow: var(--default-shadow);
+  cursor: pointer;
+  transition: transform ease-in-out 0.3s, outline 0.2s;
+}
+.gallery-img:nth-of-type(3n - 1) {
+  transform: rotate(-4deg);
+}
+.gallery-img:nth-of-type(3n - 2) {
+  transform: none;
+}
+.gallery-img:focus {
+  outline: 5px solid #000;
+}
+.gallery-img:hover {
+  transform: rotate(0deg) scale(1.1);
+  transition: transform cubic-bezier(0, 3, 1, 1) 0.2s, outline 0.2s;
+}
+
+/* Image Preview Styles */
+
+@starting-style {
+  #preview {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+#preview {
+  width: calc(100% - 60px);
+  max-width: 600px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--default-shadow);
+  transition:
+    all 0.2s allow-discrete;
+}
+#preview:open::backdrop {
+  background-color: var(--shadow-color);
+}
+
+#preview-img {
+  display: block;
+  transform: rotate(4deg);
+  margin: 2rem auto;
+  padding: var(--picture-padding);
+  background-color: var(--picture-color);
+  border: var(--picture-border);
+  box-shadow: var(--default-shadow);
+}
+
+#preview-exit {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 4px;
+}
