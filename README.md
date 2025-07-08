@@ -8,5 +8,7 @@ components to add additional functions to it.
 
 ## Credits
 
+This project uses [Anime.js](https://animejs.com/) to control animations.
+All other assets are made by me.
 This project is under the MIT License.
 
