@@ -1,12 +1,5 @@
 @import url("./shared.css");
 
-/* Gallery Variables */
-:root {
-  --picture-color: #fff;
-  --picture-border: 3px solid #aaa;
-  --picture-padding: 1.5rem;
-}
-
 /* Gallery Styles */
 
 #gallery {

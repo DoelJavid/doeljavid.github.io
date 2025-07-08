@@ -28,6 +28,11 @@
   --stickynote-background: #fff;
   --stickynote-pencil: #222;
   --stickynote-border: 3px solid #aaa;
+
+  /* Picture Variables: Used in the gallery and about page. */
+  --picture-color: #fff;
+  --picture-border: 3px solid #aaa;
+  --picture-padding: 1.5rem;
 }
 
 /* Root Styling: Includes default text styles and element colors. */
@@ -68,6 +73,34 @@ a:hover {
 a:active {
   color: var(--link-active-color);
   text-decoration: underline var(--link-active-color);
+}
+
+/* Details Styles: Used in the about page. */
+
+details {
+  margin: 1rem auto;
+  text-align: left;
+}
+
+summary {
+  width: 100%;
+  color: var(--link-color);
+  text-shadow: var(--default-shadow);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+summary:focus {
+  outline: none;
+  text-decoration: underline;
+}
+summary:hover {
+  color: var(--link-hover-color);
+}
+summary:active {
+  color: var(--link-active-color);
 }
 
 /* Form & Form Input Styling */
@@ -143,6 +176,11 @@ footer {
   justify-content: space-around;
   align-items: center;
   min-height: 240px;
+}
+
+/* Faded Class: Used to dim elements. */
+.faded {
+  opacity: 70%;
 }
 
 /* Icon List: A general purpose list for icons. */

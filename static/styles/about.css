@@ -1,0 +1,43 @@
+@import url("./shared.css");
+
+/* Main About Section Styles */
+
+#about {
+  max-width: 900px;
+  margin: 5rem auto 2rem;
+  min-height: calc(100lvh - 7rem);
+}
+
+#about-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-portrait {
+  display: inline-block;
+  transform: rotate(-4deg);
+  width: 40%;
+  min-width: 200px;
+  padding: var(--picture-padding);
+  background-color: var(--picture-color);
+  border: var(--picture-border);
+  box-shadow: var(--default-shadow);
+}
+
+#about-summary {
+  max-width: 400px;
+  margin: 0;
+  text-align: left;
+  animation: none !important;
+}
+
+/* FAQ Styles */
+
+#faq {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
