@@ -24,6 +24,12 @@
   --input-pencil: #222;
   --input-border: 3px solid #aaa;
 
+  --button-background: #ee8;
+  --button-border: 3px solid #aa4;
+
+  --button-danger-background: #e66;
+  --button-danger-border: 3px solid #a33;
+
   /* Sticky Note Decoration Variables */
   --stickynote-background: #fff;
   --stickynote-pencil: #222;
@@ -127,6 +133,36 @@ input, textarea {
 }
 textarea {
   resize: vertical;
+}
+
+/* Button Styling */
+button {
+  transform: rotate(4deg);
+  width: fit-content;
+  margin: 4px auto;
+  padding: 4px;
+  background-color: var(--button-background);
+  color: var(--input-pencil);
+  border: var(--button-border);
+  box-shadow: var(--default-shadow);
+  font-size: 1.2rem;
+  font-family: "Patrick Hand", cursive;
+  cursor: pointer;
+  transition: transform 0.15s, outline 0.15s;
+}
+button:focus {
+  outline: 5px solid #fff;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:active {
+  transform: scale(0.9);
+}
+
+button.btn-danger {
+  background-color: var(--button-danger-background);
+  border: var(--button-danger-border);
 }
 
 /* Header Content Styles */
